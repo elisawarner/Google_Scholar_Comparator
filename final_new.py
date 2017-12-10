@@ -3,18 +3,33 @@ import csv
 import re
 import flask
 import json
+import numpy as np
+import matplotlib as mpl
+mpl.use('TkAgg')
+import matplotlib.pyplot as plt
+
+# database stuff
+import psycopg2
+import psycopg2.extras
+import sys
+import csv
+from psycopg2 import sql
+from config import *
+
 from bs4 import BeautifulSoup
 from datetime import datetime
 
+
 # nytimes.py
 
-################ CACHING ###################
+################ CACHING & DATA RETRIEVAL ###################
 # -----------------------------------------------------------------------------
 # Constants
 # -----------------------------------------------------------------------------
 CACHE_FNAME = 'cache_file.json'
 DATETIME_FORMAT = "%Y-%m-%d %H:%M:%S.%f"
-DEBUG = True
+DEBUG = False
+# MAKE SURE TO DROP TABLE EVEN WITHOUT DEBUG, BEFORE YOU RERUN IT
 
 
 # -----------------------------------------------------------------------------
@@ -28,6 +43,7 @@ except:
     CACHE_DICTION = {}
 
 
+# CITE: 
 def has_cache_expired(timestamp_str, expire_in_days): # BUG 1
     """Check if cache timestamp is over expire_in_days old"""
     # gives current datetime
@@ -47,6 +63,7 @@ def has_cache_expired(timestamp_str, expire_in_days): # BUG 1
     else:
         return True
 
+# CITE: 
 def params_unique_combination(baseurl, params_d, private_keys=["api_key"]):
     alphabetized_keys = sorted(params_d.keys())
     res = []
@@ -55,8 +72,7 @@ def params_unique_combination(baseurl, params_d, private_keys=["api_key"]):
             res.append("{}-{}".format(k, params_d[k]))
     return baseurl + "_".join(res)
 
-# Add params_d
-# Find regular caching method and separate key with params_d
+# CITE: 
 def get_from_cache(url, params_d):
     """If URL exists in cache and has not expired, return the html, else return None"""
     cache_key = params_unique_combination(url, params_d)
@@ -74,11 +90,11 @@ def get_from_cache(url, params_d):
 
     return html
 
-
+# CITE: 
 def set_in_cache(url, params_d, html, expire_in_days):
     """Add URL and html to the cache dictionary, and save the whole dictionary to a file as json"""
     cache_key = params_unique_combination(url, params_d)
-    print(cache_key)
+    
     CACHE_DICTION[cache_key] = {
         'html': html,
         'timestamp': datetime.now().strftime(DATETIME_FORMAT),
@@ -89,7 +105,7 @@ def set_in_cache(url, params_d, html, expire_in_days):
         cache_json = json.dumps(CACHE_DICTION)
         cache_file.write(cache_json)
 
-
+# CITE:
 def get_html_from_url(url, params_d, expire_in_days=7): #Added params_d
     """Check in cache, if not found, load html, save in cache and then return that html"""
     # check in cache
@@ -107,9 +123,7 @@ def get_html_from_url(url, params_d, expire_in_days=7): #Added params_d
         # fetch fresh
         response = requests.get(url, params=params_d)
 
-        # this prevented encoding artifacts like
-        # "Trumpâs Tough Talk" that should have been "Trump's Tough Talk"
-        response.encoding = 'utf-8'
+        # Deleted line about encoding because it was messing up my shit
 
         html = response.text
 
@@ -118,60 +132,142 @@ def get_html_from_url(url, params_d, expire_in_days=7): #Added params_d
 
     return html
 
-################################################################
-
-def search_google_scholar(search_term):
+def search_google_scholar(search_term, params_d = {}):
 	baseurl = "https://scholar.google.com/scholar"
-	params_d = {}
 	params_d['q'] = search_term
+	
 	google_results = get_html_from_url(baseurl, params_d, expire_in_days=1)
 	google_soup = BeautifulSoup(google_results, 'html.parser')
-
-	# makes request for google scholar search term
-	# add pages later
 
 	#return soup.prettify()
 
 	# returns list of paper htmls for processing by class Paper
 	return google_soup.find_all('div',{'class':'gs_r gs_or gs_scl'})
 
+
+######################## END CACHING #############################################
+
+########################### DATABASE FILES #######################################
+############ CITE: SI507_project6.py, Jackie Cohen, Anand Doshi ##################
+
+def get_connection_and_cursor():
+    try:
+        if db_password != "":
+            db_connection = psycopg2.connect("dbname='{0}' user='{1}' password='{2}'".format(db_name, db_user, db_password))
+            print("Success connecting to database")
+        else:
+            db_connection = psycopg2.connect("dbname='{0}' user='{1}'".format(db_name, db_user))
+    except:
+        print("Unable to connect to the database. Check server and credentials.")
+        sys.exit(1) # Stop running program if there's no db connection.
+
+    db_cursor = db_connection.cursor(cursor_factory=psycopg2.extras.RealDictCursor)
+
+    return db_connection, db_cursor
+
+conn, cur = get_connection_and_cursor()
+
+
+# Write code / functions to create tables with the columns you want and all database setup here.
+def setup_database():
+    # Invovles DDL commands
+    # DDL --> Data Definition Language
+    # CREATE, DROP, ALTER, RENAME, TRUNCATE
+
+    conn, cur = get_connection_and_cursor()
+
+    if DEBUG == True:
+	    # starts new tables every time you run
+    	cur.execute("""DROP TABLE IF EXISTS "Publications" """)
+    	cur.execute("""DROP TABLE IF EXISTS "Subjects" """)
+
+    #### CREATE SITES TABLE ###
+    cur.execute("""CREATE TABLE IF NOT EXISTS "Subjects"(
+        "ID" SERIAL PRIMARY KEY,
+        "Name" VARCHAR(500) UNIQUE NOT NULL
+    )""")
+
+    cur.execute("""CREATE TABLE IF NOT EXISTS "Publications"(
+        "ID" SERIAL PRIMARY KEY,
+        "Title" VARCHAR(500) UNIQUE NOT NULL,
+        "Authors" TEXT,
+        "Year" INTEGER,
+        "Citations" INTEGER,
+        "Journal" VARCHAR(255),
+        "Link" VARCHAR(500),
+        "Topic_ID" INTEGER, FOREIGN KEY ("Topic_ID") REFERENCES "Subjects"("ID")
+    )""")
+
+    # Save changes
+    conn.commit()
+
+    print('Setup database complete')
+
+# inserts a column into the table
+def insert(conn, cur, table, data_dict):
+    column_names = data_dict.keys()
+    # print(column_names)
+
+    # generate insert into query string
+    query = sql.SQL('INSERT INTO "{0}"({1}) VALUES({2}) ON CONFLICT DO NOTHING').format(
+        sql.SQL(table),
+        sql.SQL(', ').join(map(sql.Identifier, column_names)),
+        sql.SQL(', ').join(map(sql.Placeholder, column_names))
+    )
+    query_string = query.as_string(conn)
+    cur.execute(query_string, data_dict)
+
+
+########################## CLASS AND CSV FILES ###################################
+
 class Paper(object):
-	def __init__(self, data):
-		self.title = data.find('h3',{'class':'gs_rt'}).text.strip(' .')
-		self.link = data.find('h3',{'class':'gs_rt'}).find('a')['href']
+	def __init__(self, data, search_term):
+		self.search_term = search_term
+
+		self.title = data.find('h3',{'class':'gs_rt'}).text.replace('[HTML]','').replace('[PDF]','').replace('[CITATION][C]','').replace('[BOOK][B]','').strip(' .').encode('utf-8').decode('ascii','ignore')
 		try:
-			results_list = data.find_all('div',{'class':'gs_fl'})
-			for x in results_list:
-				try:
-					self.no_citations = re.search('(?<=Cited by )....', x.text).group(0).strip(' R')
-				except:
-					pass
+			self.link = data.find('h3',{'class':'gs_rt'}).find('a')['href']
 		except:
-			self.no_citations = 0
+			self.link = None
+		
+		results_list = data.find_all('div',{'class':'gs_fl'})
+		self.no_citations = 0
+		for x in results_list:
+			try:
+				self.no_citations = int(re.search('(?<=Cited by )....', x.text).group(0).strip(' R'))
+			except:
+				pass
 
 		author_line_pre = data.find('div',{'class':'gs_a'}).text
 		author_line = re.split('\s\-\s', author_line_pre)
-		self.authors = [x.strip() for x in author_line[0].split(',')]
+		self.authors = [x.strip(' ').encode('utf-8').decode('ascii','ignore') for x in author_line[0].split(',')]
 		self.year = author_line[1].split(',')[-1].strip()
 
+		try:
+			self.journal = author_line[1].split(',')[0].strip().encode('utf-8').decode('ascii','ignore')
+		except:
+			self.journal = None
+		if self.journal.isdigit():
+			self.journal = None
+
 	def package(self):
-		return [self.title, self.authors, self.year, self.no_citations, self.link]
+		return [self.title, self.authors, self.year, self.no_citations, self.journal, self.link, self.search_term]
 
 	def __str__(self):
 		return "{0} by {1}".format(self.title, ' '.join(self.authors))
 
 	# FILL THIS OUT
 	def __repr__(self):
-		pass
+		return self.no_citations
 
 	# FILL THIS OUT
-	def __contains__(self):
-		pass
+	def __contains__(self, value):
+		return value in self.title
 
 def write_to_csv(name, input_list):
 	fhnd = open(name + '.csv','w')
 
-	fhnd.write('Title,Authors,Year,Citations,Link\n')
+	fhnd.write('Title,Authors,Year,Citations,Journal,Link,Topic\n')
 	outfile = csv.writer(fhnd, delimiter=",", quotechar='"', quoting=csv.QUOTE_MINIMAL)
 
 	for row in input_list:
@@ -179,22 +275,97 @@ def write_to_csv(name, input_list):
 
 	fhnd.close()
 
+##########################################################################
 
-def wrapper_call(search_term):
-	outlist = []
-	cite_list = []
-	for entry in search_google_scholar(search_term):
-		a = Paper(entry)
-		print(a.no_citations)
-		outlist.append(a.package())
-		cite_list.append(a.no_citations)
 
-	# take average number of citations
+def wrapper_call(search_term, ID_num):
+    outlist = []
+    cite_list = []
+    journal_list = []
+    params_d = {}
+    maxPage = 40
+
+    # setting up Database stuff
+    conn, cur = get_connection_and_cursor()
+
+    # add values
+    cur.execute("""INSERT INTO "Subjects"("ID", "Name") VALUES(%s, %s) on conflict do nothing""", (ID_num, search_term))
+
+    if DEBUG == True:
+        print("%s added to Subject database" % (search_term))
+
+    ### This part gets the information from google, then mines it for info
+
+#    try:
+    for num in [0,maxPage,10]:
+        params_d['start'] = num
+        print("Page %s" % (num))
+        search_google_scholar(search_term, params_d)
+
+        for entry in search_google_scholar(search_term, params_d):
+
+            a = Paper(entry, search_term)
+#            print(a.journal)
+            outlist.append(a.package())
+
+            cur.execute("""SELECT "ID" FROM "Publications" """)
+            id_test = len(cur.fetchall())
+
+            insert(conn, cur, "Publications", {"ID": id_test+1, "Title": a.title, "Authors": a.authors, "Year": a.year, "Citations": a.no_citations, "Journal": a.journal, "Link": a.link, "Topic_ID": ID_num})
+
+            if DEBUG == True:
+            	print("Added %s to database" % (a.title))
+
+            cite_list.append(a.no_citations)
+
+    # take average number of citations
+#    except:
+#        print("Please try another search term. We couldn't find enough Google Results")
+    conn.commit()
+
+	# Create a csv file
+    write_to_csv(search_term, outlist)
+    return (cite_list, journal_list)
+
+
+def plotdata(input_dict):
+
+	key_names = list(input_dict.keys())
+	plot_list = []
+
+	for key in key_names:
+		plot_list.append(np.asarray(input_dict[key][0]))
+
+	# Create a figure instance
+	fig = plt.figure(1, figsize = (9, 6))
+
+	# Create an axes instance
+	ax = fig.add_subplot(111)
+
+	# Create the boxplot
+	bp = ax.boxplot(plot_list)
+
+	fig.savefig('fig1.png', bbox_inches = 'tight')
+
+
+###################################################### INTERFACE ######################################################
+
+# setting up Database stuff
+conn, cur = get_connection_and_cursor()
+# set up the database
+setup_database()
+
+search_dict = {}
+
+response = input("List up to five fields to compare, separated by commas\n(e.g. Memristors, ebola virus, reduced order models, hepatocellular carcinoma, HIV):\n")
+fields = [x.strip() for x in response.split(',')]
 	
-	write_to_csv(search_term, outlist)
+print(fields)
+
+count = 0
+for fieldName in fields:
+	count += 1
+	search_dict[fieldName] = wrapper_call(fieldName, count)
 
 
-#search_google_scholar('a')
-
-wrapper_call('apples')
-wrapper_call('hepatocellular carcinoma')
+plotdata(search_dict)
