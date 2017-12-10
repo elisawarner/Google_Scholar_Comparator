@@ -18,6 +18,8 @@ from config import *
 
 from bs4 import BeautifulSoup
 from datetime import datetime
+from flask import Flask, render_template, request
+from flask_script import Manager
 
 
 # nytimes.py
@@ -253,6 +255,9 @@ class Paper(object):
 	def package(self):
 		return [self.title, self.authors, self.year, self.no_citations, self.journal, self.link, self.search_term]
 
+	def package_html(self):
+		return [self.title, self.authors, self.year, self.journal, self.no_citations]
+
 	def __str__(self):
 		return "{0} by {1}".format(self.title, ' '.join(self.authors))
 
@@ -280,6 +285,7 @@ def write_to_csv(name, input_list):
 
 def wrapper_call(search_term, ID_num):
     outlist = []
+    html_list = []
     cite_list = []
     journal_list = []
     params_d = {}
@@ -305,8 +311,9 @@ def wrapper_call(search_term, ID_num):
         for entry in search_google_scholar(search_term, params_d):
 
             a = Paper(entry, search_term)
-#            print(a.journal)
+
             outlist.append(a.package())
+            html_list.append(a.package_html())
 
             cur.execute("""SELECT "ID" FROM "Publications" """)
             id_test = len(cur.fetchall())
@@ -325,11 +332,11 @@ def wrapper_call(search_term, ID_num):
 
 	# Create a csv file
     write_to_csv(search_term, outlist)
-    return (cite_list, journal_list)
+    return (cite_list, html_list[:5])
 
 
 def plotdata(input_dict):
-
+	# CITE: Code inspired by http://blog.bharatbhole.com/creating-boxplots-with-matplotlib/
 	key_names = list(input_dict.keys())
 	plot_list = []
 
@@ -338,34 +345,90 @@ def plotdata(input_dict):
 
 	# Create a figure instance
 	fig = plt.figure(1, figsize = (9, 6))
+	plt.title('Number of Citations Per Search Term')
 
 	# Create an axes instance
 	ax = fig.add_subplot(111)
 
 	# Create the boxplot
-	bp = ax.boxplot(plot_list)
+	bp = ax.boxplot(plot_list, patch_artist=True)
+	ax.set_xticklabels(key_names)
 
-	fig.savefig('fig1.png', bbox_inches = 'tight')
+
+	# prettify everything
+	## add patch_artist=True option to ax.boxplot() 
+	## to get fill color
+
+	## change outline color, fill color and linewidth of the boxes
+	for box in bp['boxes']:
+		# change outline color
+		box.set( color='#7570b3', linewidth=2)
+		# change fill color
+		box.set( facecolor = '#1b9e77' )
+
+	## change color and linewidth of the whiskers
+	for whisker in bp['whiskers']:
+		whisker.set(color='#7570b3', linewidth=2)
+
+	## change color and linewidth of the caps
+	for cap in bp['caps']:
+		cap.set(color='#7570b3', linewidth=2)
+
+	## change color and linewidth of the medians
+	for median in bp['medians']:
+		median.set(color='#b2df8a', linewidth=2)
+
+	## change the style of fliers and their fill
+	for flier in bp['fliers']:
+		flier.set(marker='o', color='#e7298a', alpha=0.5)
+
+	fig.savefig('./static/fig1.png', bbox_inches = 'tight')
+	plt.clf()
 
 
 ###################################################### INTERFACE ######################################################
 
-# setting up Database stuff
-conn, cur = get_connection_and_cursor()
-# set up the database
-setup_database()
+def interface(fields):
+	# setting up Database stuff
+	conn, cur = get_connection_and_cursor()
+	# set up the database
+	setup_database()
 
-search_dict = {}
+	search_dict = {}
 
-response = input("List up to five fields to compare, separated by commas\n(e.g. Memristors, ebola virus, reduced order models, hepatocellular carcinoma, HIV):\n")
-fields = [x.strip() for x in response.split(',')]
+	#response = input("List up to five fields to compare, separated by commas\n(e.g. Memristors, ebola virus, reduced order models, hepatocellular carcinoma, HIV):\n")
+	#fields = [x.strip() for x in response.split(',')]
 	
-print(fields)
+	print(fields)
 
-count = 0
-for fieldName in fields:
-	count += 1
-	search_dict[fieldName] = wrapper_call(fieldName, count)
+	count = 0
+	for fieldName in fields:
+		count += 1
+		search_dict[fieldName] = wrapper_call(fieldName, count)
+
+	plotdata(search_dict)
+
+	return(search_dict)
+
+######################################################
+
+app = Flask(__name__)
+app.config['SEND_FILE_MAX_AGE_DEFAULT'] = 0
+
+manager = Manager(app)
+
+@app.route('/')
+def my_form():
+	return render_template('interface.html')
 
 
-plotdata(search_dict)
+@app.route('/', methods=['GET', 'POST'])
+def my_form_post():
+    text = request.form['text']
+    fields = [x.strip() for x in text.upper().split(',')]
+    return render_template('results.html', fields = fields, return_dict = interface(fields))
+ 
+
+if __name__ == '__main__':
+    manager.run() # Runs the flask server in a special way that makes it nice to debug
+

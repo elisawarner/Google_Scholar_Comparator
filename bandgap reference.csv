@@ -1,0 +1,31 @@
+Title,Authors,Year,Citations,Journal,Link,Topic
+A CMOS bandgap reference circuit with sub-1-V operation,"['H Banba', 'H Shiga', 'A Umezawa']",1999,909,IEEE Journal of Solid,http://ieeexplore.ieee.org/abstract/document/760378/,bandgap reference
+A sub-1-V 15-ppm//spl deg/C CMOS bandgap voltage reference without requiring low threshold voltage device,"['KN Leung', 'PKT Mok']",2002,490,IEEE Journal of Solid-State Circuits,http://ieeexplore.ieee.org/abstract/document/991391/,bandgap reference
+A simple three-terminal IC bandgap reference,['AP Brokaw'],1974,522,IEEE Journal of Solid-State Circuits,http://ieeexplore.ieee.org/abstract/document/1050532/,bandgap reference
+A 2-V 23-/spl mu/A 5.3-ppm//spl deg/C curvature-compensated CMOS bandgap voltage reference,"['KN Leung', 'PKT Mok', 'CY Leung']",2003,305,IEEE Journal of Solid-State,http://ieeexplore.ieee.org/abstract/document/1183873/,bandgap reference
+A precision curvature-compensated CMOS bandgap reference,"['BS Song', 'PR Gray']",1983,421,IEEE Journal of Solid-State Circuits,http://ieeexplore.ieee.org/abstract/document/1052013/,bandgap reference
+Accurate analysis of temperature effects in i/sub c/v/sub be/characteristics with application to bandgap reference sources,['YP Tsividis'],1980,339,IEEE Journal of Solid-State Circuits,http://ieeexplore.ieee.org/abstract/document/1051519/,bandgap reference
+A curvature-corrected low-voltage bandgap reference,"['M Gunawan', 'GCM Meijer', 'J Fonderie']",1993,194,IEEE Journal of Solid,http://ieeexplore.ieee.org/abstract/document/217981/,bandgap reference
+A 1.1-V current-mode and piecewise-linear curvature-corrected bandgap reference,"['G Rincon-Mora', 'PE Allen']",1998,228,IEEE Journal of Solid-State Circuits,http://ieeexplore.ieee.org/abstract/document/720402/,bandgap reference
+A CMOS bandgap reference without resistors,"['AE Buck', 'CL McDonald', 'SH Lewis']",2002,188,IEEE Journal of Solid,http://ieeexplore.ieee.org/abstract/document/974548/,bandgap reference
+New curvature-compensation technique for CMOS bandgap reference with sub-1-V operation,"['MD Ker', 'JS Chen']",2006,159,IEEE Transactions on circuits and systems II,http://ieeexplore.ieee.org/abstract/document/1683977/,bandgap reference
+Bandgap voltage reference and method with further temperature correction,"['FD Carvajal', 'TA Schmidt']",1990,52,US Patent 4,https://www.google.com/patents/US4939442,bandgap reference
+A 1.6-V 25-A 5-ppm/C Curvature-Compensated Bandgap Reference,"['ZK Zhou', 'Y Shi', 'Z Huang', 'PS Zhu']",2012,66,on Circuits and,http://ieeexplore.ieee.org/abstract/document/6072288/,bandgap reference
+Bandgap voltage reference employing sub-surface current using a standard CMOS process,"['MJ Caruso', 'DB Hildebrand', 'KB Ohri']",1982,56,US Patent 4,https://www.google.com/patents/US4317054,bandgap reference
+Start circuit for a bandgap reference cell,"['D Cave', 'MD Gadberry']",1992,47,US Patent 5,https://www.google.com/patents/US5087830,bandgap reference
+A 1.2-V Piecewise Curvature-Corrected Bandgap Reference in 0.5 m CMOS Process,"['JH Li', 'X Zhang', 'M Yu']",2011,50,IEEE Transactions on Very Large Scale,http://ieeexplore.ieee.org/abstract/document/5446294/,bandgap reference
+Op-amps and startup circuits for CMOS bandgap references with near 1-V supply,['A Boni'],2002,192,IEEE Journal of Solid-State Circuits,http://ieeexplore.ieee.org/abstract/document/1035950/,bandgap reference
+Bandgap voltage reference circuit,['D Yum'],1991,51,US Patent 5,https://www.google.com/patents/US5053640,bandgap reference
+Second-order compensated bandgap reference with convex correction,"['C Avoinne', 'T Rashid', 'V Chowdhury']",2005,37,electronics,http://ieeexplore.ieee.org/abstract/document/1406596/,bandgap reference
+CMOS bandgap voltage reference circuit for supply voltages down to 0.6 V,['T Ytterdal'],2003,39,Electronics letters,http://ieeexplore.ieee.org/abstract/document/1238581/,bandgap reference
+A Radiation Hard Bandgap Reference Circuit in a Standard 0.13 m CMOS Technology,"['V Gromov', 'AJ Annema', 'R Kluit']",2007,50,IEEE transactions on,http://ieeexplore.ieee.org/abstract/document/4395395/,bandgap reference
+A low-voltage CMOS bandgap reference,"['EA Vittoz', 'O Neyroud']",1979,176,IEEE Journal of Solid-State Circuits,http://ieeexplore.ieee.org/abstract/document/1051218/,bandgap reference
+Design of low-voltage bandgap reference using transimpedance amplifier,"['Y Jiang', 'EKF Lee']",2000,156,IEEE Transactions on Circuits and Systems,http://ieeexplore.ieee.org/abstract/document/847072/,bandgap reference
+A low-power differential CMOS bandgap reference,"['TL Brooks', 'AL Westwick']",1994,84,Solid-State Circuits Conference,http://ieeexplore.ieee.org/abstract/document/344654/,bandgap reference
+A new curvature-corrected bandgap reference,"['GCM Meijer', 'PC Schmale']",1982,114,IEEE Journal of Solid,http://ieeexplore.ieee.org/abstract/document/1051872/,bandgap reference
+Design considerations of recent advanced low-voltage low-temperature-coefficient CMOS bandgap voltage reference,"['PKT Mok', 'KN Leung']",2004,115,,http://ieeexplore.ieee.org/abstract/document/1358907/,bandgap reference
+An improved bandgap reference with high power supply rejection,"['SK Hoon', 'J Chen', 'F Maloberti']",2002,71,Circuits and Systems,http://ieeexplore.ieee.org/abstract/document/1010833/,bandgap reference
+"A Novel Wide-Temperature-Range, 3.9 ppm/C CMOS Bandgap Reference Circuit","['CM Andreou', 'S Koudounas']",2012,107,IEEE Journal of Solid,http://ieeexplore.ieee.org/abstract/document/6078439/,bandgap reference
+A Single-Trim CMOS Bandgap Reference With a  Inaccuracy of 0.15% From 40C to 125C,"['G Ge', 'C Zhang', 'G Hoogzaad']",2011,97,IEEE Journal of Solid,http://ieeexplore.ieee.org/abstract/document/6056712/,bandgap reference
+A floating CMOS bandgap voltage reference for differential applications,"['M Ferro', 'F Salerno', 'R Castello']",1989,85,IEEE Journal of Solid-State,http://ieeexplore.ieee.org/abstract/document/32027/,bandgap reference
+A low supply voltage high PSRR voltage reference in CMOS process,"['KM Tham', 'K Nagaraj']",1995,184,IEEE Journal of Solid-State Circuits,http://ieeexplore.ieee.org/abstract/document/384173/,bandgap reference

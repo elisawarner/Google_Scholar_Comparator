@@ -1,0 +1,47 @@
+<!--CITE: Anand Doshi, section-week-14-->
+<!DOCTYPE html>
+<html>
+<font face="Verdana">
+    <head>
+        <!--<meta charset="utf-8">-->
+        <title>Google Scholar Comparator Results</title>
+        <h1 align='center'>Google Scholar Comparator Results</h1>
+    </head>
+    <body>
+        <header>
+            <h3 align='center'><b>You chose the following search topics:</b></h3>
+            {% for item in fields %}
+            <li align='center'> {{ item }} </li>
+            {% endfor %}
+        </header>
+        <br></br>
+        <p style="text-align:center">
+            <img src='{{url_for('static', filename='fig1.png')}}' align='middle' alt='Number of Citations per Search Term' />
+        </p>
+
+        <br></br>
+        <h3 align='center'>Top Search Results:</h3>
+        {% for item in return_dict %}
+        <h4 align='center'> {{ item }} </h4>
+
+        <table align='center' width="1050" border='1' bgcolor="#FFE9C8">
+            <tr>
+                <th width="600">Publication</th>
+                <th width="400">Authors</th>
+                <th width="5">Year</th>
+                <th width="25">Journal</th>
+                <th width="20">Number of Citations</th>
+            </tr>
+            {% for paper_details in return_dict[item][1] %}
+            <tr>
+                {% for values in paper_details %}
+                <td> {{ values }} </td>
+                {% endfor %}
+            </tr>
+            {% endfor %}
+        </table>
+        <br></br>
+        {% endfor %}
+    </body>
+</font>
+</html>
