@@ -1,0 +1,31 @@
+Title,Authors,Year,Citations,Journal,Link,Topic
+On the approximate realization of continuous mappings by neural networks,['KI Funahashi'],1989,4487,Neural networks,http://www.sciencedirect.com/science/article/pii/0893608089900038,neural networks
+Multilayer feedforward networks are universal approximators,"['K Hornik', 'M Stinchcombe', 'H White']",1989,1482,Neural networks,http://www.sciencedirect.com/science/article/pii/0893608089900208,neural networks
+Probabilistic neural networks,['DF Specht'],1990,3894,Neural networks,http://www.sciencedirect.com/science/article/pii/089360809090049Q,neural networks
+Approximation capabilities of multilayer feedforward networks,['K Hornik'],1991,2675,Neural networks,http://www.sciencedirect.com/science/article/pii/089360809190009T,neural networks
+Neural networks and the bias/variance dilemma,"['S Geman', 'E Bienenstock', 'R Doursat']",2008,3336,Neural Networks,http://www.mitpressjournals.org/doi/abs/10.1162/neco.1992.4.1.1,neural networks
+"Nonlinear neural networks: Principles, mechanisms, and architectures",['S Grossberg'],1988,1740,Neural networks,http://www.sciencedirect.com/science/article/pii/0893608088900214,neural networks
+"Principal components, minor components, and linear neural networks",['E Oja'],1992,938,Neural networks,http://www.sciencedirect.com/science/article/pii/S0893608005800899,neural networks
+Neural networks and principal component analysis: Learning from examples without local minima,"['P Baldi', 'K Hornik']",1989,1057,Neural networks,http://www.sciencedirect.com/science/article/pii/0893608089900142,neural networks
+Networks of spiking neurons: the third generation of neural network models,['W Maass'],1997,1090,Neural networks,http://www.sciencedirect.com/science/article/pii/S0893608097000117,neural networks
+Approximation of dynamical systems by continuous time recurrent neural networks,"['K Funahashi', 'Y Nakamura']",1993,668,Neural networks,http://www.sciencedirect.com/science/article/pii/S089360800580125X,neural networks
+Increased rates of convergence through learning rate adaptation,['RA Jacobs'],1988,2335,Neural networks,http://www.sciencedirect.com/science/article/pii/0893608088900032,neural networks
+Global exponential stability of generalized recurrent neural networks with discrete and distributed delays,"['Y Liu', 'Z Wang', 'X Liu']",2006,497,Neural Networks,http://www.sciencedirect.com/science/article/pii/S0893608005000833,neural networks
+Delay-dependent exponential stability analysis of delayed neural networks: an LMI approach,"['X Liao', 'G Chen', 'EN Sanchez']",2002,458,Neural networks,http://www.sciencedirect.com/science/article/pii/S0893608002000412,neural networks
+[BOOK][B] Neural networks and learning machines,"['SS Haykin', 'SS Haykin', 'SS Haykin', 'SS Haykin']",2009,4075,,https://cise.ufl.edu/class/cap6615sp12/syllabus.pdf,neural networks
+Stability analysis of delayed cellular neural networks,"['J Cao', 'D Zhou']",1998,354,Neural networks,http://www.sciencedirect.com/science/article/pii/S089360809800080X,neural networks
+Imagenet classification with deep convolutional neural networks,"['A Krizhevsky', 'I Sutskever', 'GE Hinton']",2012,1770,Advances in neural,http://papers.nips.cc/paper/4824-imagenet-classification-with-deep-convolutional-neural-networks,neural networks
+Chaotic simulated annealing by a neural network model with transient chaos,"['L Chen', 'K Aihara']",1995,759,Neural networks,http://www.sciencedirect.com/science/article/pii/089360809500033V,neural networks
+Theory of the backpropagation neural network,['R Hecht-Nielsen'],1988,2810,Neural Networks,http://ieeexplore.ieee.org/abstract/document/118638/,neural networks
+Neural networks and physical systems with emergent collective computational abilities,['JJ Hopfield'],1987,1906,Spin Glass Theory and Beyond: An Introduction to the,http://www.worldscientific.com/doi/abs/10.1142/9789812799371_0043,neural networks
+Stability conditions for nonlinear continuous neural networks with asymmetric connection weights,['K Matsuoka'],1992,228,Neural networks,http://www.sciencedirect.com/science/article/pii/0893608092900117,neural networks
+Kolmogorov's theorem and multilayer neural networks,['V Krkov'],1992,573,Neural networks,http://www.sciencedirect.com/science/article/pii/0893608092900128,neural networks
+Universal approximation of an unknown mapping and its derivatives using multilayer feedforward networks,"['K Hornik', 'M Stinchcombe', 'H White']",1990,1538,Neural networks,http://www.sciencedirect.com/science/article/pii/0893608090900056,neural networks
+Creating artificial neural networks that generalize,"['J Sietsma', 'RJF Dow']",1991,632,Neural networks,http://www.sciencedirect.com/science/article/pii/0893608091900332,neural networks
+Deep learning in neural networks: An overview,['J Schmidhuber'],2015,2164,Neural networks,http://www.sciencedirect.com/science/article/pii/S0893608014002135,neural networks
+[BOOK][B] Neural networks: a comprehensive foundation,['S Haykin'],1994,4518,,http://dl.acm.org/citation.cfm?id=541500,neural networks
+Stacked generalization,['DH Wolpert'],1992,4230,Neural networks,http://www.sciencedirect.com/science/article/pii/S0893608005800231,neural networks
+Neural networks and fuzzy systems: a dynamical systems approach to machine intelligence/book and disk,['B Kosko'],1992,7075,Vol. 1Prentice hall,https://pdfs.semanticscholar.org/15b7/402e1112c624ba93fbc94d61557f6ac07b5c.pdf,neural networks
+Multilayer feedforward networks with a nonpolynomial activation function can approximate any function,"['M Leshno', 'VY Lin', 'A Pinkus', 'S Schocken']",1993,982,Neural networks,http://www.sciencedirect.com/science/article/pii/S0893608005801315,neural networks
+A scaled conjugate gradient algorithm for fast supervised learning,['MF Mller'],1993,3163,Neural networks,http://www.sciencedirect.com/science/article/pii/S0893608005800565,neural networks
+Dynamic link of memoryChaotic memory map in nonequilibrium neural networks,['I Tsuda'],1992,531,Neural networks,http://www.sciencedirect.com/science/article/pii/S0893608005800292,neural networks

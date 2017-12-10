@@ -270,7 +270,7 @@ class Paper(object):
 		return value in self.title
 
 def write_to_csv(name, input_list):
-	fhnd = open(name + '.csv','w')
+	fhnd = open('./csv_files/' + name + '.csv','w')
 
 	fhnd.write('Title,Authors,Year,Citations,Journal,Link,Topic\n')
 	outfile = csv.writer(fhnd, delimiter=",", quotechar='"', quoting=csv.QUOTE_MINIMAL)
