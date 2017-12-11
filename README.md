@@ -4,7 +4,7 @@ Regenerated from my previous git folder called "Final_Project"
 What it does:
 * Accepts multiple Google Scholar search terms separated by a comma (up to 5 is suitable for the graphic). Returns a graphic of boxplots to describe the distribution of number of citations of top search results for Google Scholar in that field. Also returns 
 
-![Image of Google Scholar Comparator](https://github.com/elisawarner/Final_Project/blob/master/Google_Comparator-3.png)
+![Image of Google Scholar Comparator](https://github.com/elisawarner/Final_Project/blob/master/Google_Comparator_3.png)
 ![Image of Google Scholar Comparator](https://github.com/elisawarner/Final_Project/blob/master/Google_Comparator-2.png)
 
 ## Terms of Use:
