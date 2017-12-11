@@ -6,7 +6,6 @@ What it does:
 
 ![Image of Google Scholar Comparator](https://github.com/elisawarner/Final_Project/blob/master/Google_Comparator-1.png)
 ![Image of Google Scholar Comparator](https://github.com/elisawarner/Final_Project/blob/master/Google_Comparator-2.png)
-![Image of Google Scholar Comparator](https://github.com/elisawarner/Final_Project/blob/master/Google_Comparator-3.png)
 
 ## Terms of Use:
 * Please use Chrome Browser, because cache-clearing function doesn't work in Safari
