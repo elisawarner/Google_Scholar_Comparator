@@ -1,13 +1,13 @@
 Title,Authors,Year,Citations,Journal,Link,Topic
 Resistance switching memories are memristors,['L Chua'],2014,768,Memristor Networks,http://link.springer.com/chapter/10.1007/978-3-319-02630-5_3,MEMRISTORS
-"Circuit elements with memory: memristors, memcapacitors, and meminductors","['M Di Ventra', 'YV Pershin', 'LO Chua']",2009,613,Proceedings of the IEEE,http://ieeexplore.ieee.org/abstract/document/5247127/,MEMRISTORS
+"Circuit elements with memory: memristors, memcapacitors, and meminductors","['M Di Ventra', 'YV Pershin', 'LO Chua']",2009,615,Proceedings of the IEEE,http://ieeexplore.ieee.org/abstract/document/5247127/,MEMRISTORS
 Practical approach to programmable analog circuits with memristors,"['YV Pershin', 'M Di Ventra']",2010,418,on Circuits and Systems I: Regular,http://ieeexplore.ieee.org/abstract/document/5405039/,MEMRISTORS
 Exponential ionic drift: fast switching and low volatility of thin-film memristors,"['DB Strukov', 'RS Williams']",2009,377,Applied Physics A: Materials Science &,http://www.springerlink.com/index/G671774418V0U312.pdf,MEMRISTORS
 On SPICE macromodelling of TiO2 memristors,"['S Benderli', 'TA Wey']",2009,188,Electronics letters,http://ieeexplore.ieee.org/abstract/document/4807029/,MEMRISTORS
-Training and operation of an integrated neuromorphic network based on metal-oxide memristors,"['M Prezioso', 'F Merrikh-Bayat', 'BD Hoskins', 'GC Adam']",2015,398,Nature,https://www.nature.com/nature/journal/v521/n7550/abs/nature14441.html,MEMRISTORS
+Training and operation of an integrated neuromorphic network based on metal-oxide memristors,"['M Prezioso', 'F Merrikh-Bayat', 'BD Hoskins', 'GC Adam']",2015,400,Nature,https://www.nature.com/nature/journal/v521/n7550/abs/nature14441.html,MEMRISTORS
 A scalable neuristor built with Mott memristors,"['MD Pickett', 'G Medeiros-Ribeiro', 'RS Williams']",2013,244,Nature materials,https://www.nature.com/nmat/journal/v12/n2/abs/nmat3510.html,MEMRISTORS
 Two centuries of memristors,['T Prodromakis'],2013,159,Chaos,http://www.worldscientific.com/doi/abs/10.1142/9789814434805_0041,MEMRISTORS
-Compact models for memristors based on charge-flux constitutive relationships,"['S Shin', 'K Kim', 'SM Kang']",2010,180,IEEE Transactions on Computer,http://ieeexplore.ieee.org/abstract/document/5433745/,MEMRISTORS
+Compact models for memristors based on charge-flux constitutive relationships,"['S Shin', 'K Kim', 'SM Kang']",2010,179,IEEE Transactions on Computer,http://ieeexplore.ieee.org/abstract/document/5433745/,MEMRISTORS
 CNN using memristors for neighborhood connections,"['E Lehtonen', 'M Laiho']",2010,131,Cellular Nanoscale Networks and Their,http://ieeexplore.ieee.org/abstract/document/5430304/,MEMRISTORS
 Characterization of electroforming-free titanium dioxide memristors,"['JP Strachan', 'JJ Yang', 'LA Montoro']",2013,37,Beilstein journal of,https://www.ncbi.nlm.nih.gov/pmc/articles/PMC3740802/,MEMRISTORS
 Semistate models of electrical circuits including memristors,"['R Riaza', 'C Tischendorf']",2011,38,International Journal of Circuit Theory,http://onlinelibrary.wiley.com/doi/10.1002/cta.665/full,MEMRISTORS
@@ -20,12 +20,12 @@ Electric currents in networks of interconnected memristors,"['EN Oskoee', 'M Sah
 Analog memristors based on thickening/thinning of Ag nanofilaments in amorphous manganite thin films,"['D Liu', 'H Cheng', 'X Zhu', 'G Wang']",2013,41,ACS applied materials &,http://pubs.acs.org/doi/abs/10.1021/am403497y,MEMRISTORS
 Passive switching of electromagnetic devices with memristors,"['MG Bray', 'DH Werner']",2010,26,Applied Physics Letters,http://aip.scitation.org/doi/abs/10.1063/1.3299020,MEMRISTORS
 Stateful implication logic with memristors,"['E Lehtonen', 'M Laiho']",2009,117,Proceedings of the 2009 IEEE/ACM International,http://dl.acm.org/citation.cfm?id=1936814,MEMRISTORS
-Writing to and reading from a nano-scale crossbar memory based on memristors,"['PO Vontobel', 'W Robinett', 'PJ Kuekes']",2009,193,,http://iopscience.iop.org/article/10.1088/0957-4484/20/42/425204/meta,MEMRISTORS
+Writing to and reading from a nano-scale crossbar memory based on memristors,"['PO Vontobel', 'W Robinett', 'PJ Kuekes']",2009,194,,http://iopscience.iop.org/article/10.1088/0957-4484/20/42/425204/meta,MEMRISTORS
 Engineering nonlinearity into memristors for passive crossbar applications,"['J Joshua Yang', 'MX Zhang', 'MD Pickett']",2012,165,Applied Physics,http://aip.scitation.org/doi/abs/10.1063/1.3693392,MEMRISTORS
 SPICE modeling of memristors,"['H Abdalla', 'MD Pickett']",2011,146,Circuits and Systems (ISCAS),http://ieeexplore.ieee.org/abstract/document/5937942/,MEMRISTORS
 Two memristors suffice to compute all Boolean functions,"['E Lehtonen', 'JH Poikonen', 'M Laiho']",2010,70,Electronics letters,http://ieeexplore.ieee.org/abstract/document/5410671/,MEMRISTORS
 Solving mazes with memristors: A massively parallel approach,"['YV Pershin', 'M Di Ventra']",2011,116,Physical Review E,https://journals.aps.org/pre/abstract/10.1103/PhysRevE.84.046703,MEMRISTORS
 Nanoparticle assemblies as memristors,"['TH Kim', 'EY Jang', 'NJ Lee', 'DJ Choi', 'KJ Lee', 'J Jang']",2009,136,Nano,http://pubs.acs.org/doi/abs/10.1021/nl900030n,MEMRISTORS
 STDP and STDP variations with memristors for spiking neuromorphic learning systems,"['T Serrano-Gotarredona', 'T Masquelier']",2013,145,Frontiers in,http://www.mdpi.com/article/10.3389/fnins.2013.00002,MEMRISTORS
-"Putting memory into circuit elements: memristors, memcapacitors, and meminductors [point of view]","['M Di Ventra', 'YV Pershin', 'LO Chua']",2009,68,Proceedings of the IEEE,http://ieeexplore.ieee.org/abstract/document/5109686/,MEMRISTORS
-HodgkinHuxley axon is made of memristors,"['L Chua', 'V Sbitnev', 'H Kim']",2012,106,International Journal of Bifurcation and,http://www.worldscientific.com/doi/abs/10.1142/S021812741230011X,MEMRISTORS
+"Putting memory into circuit elements: memristors, memcapacitors, and meminductors [point of view]","['M Di Ventra', 'YV Pershin', 'LO Chua']",2009,69,Proceedings of the IEEE,http://ieeexplore.ieee.org/abstract/document/5109686/,MEMRISTORS
+HodgkinHuxley axon is made of memristors,"['L Chua', 'V Sbitnev', 'H Kim']",2012,107,International Journal of Bifurcation and,http://www.worldscientific.com/doi/abs/10.1142/S021812741230011X,MEMRISTORS
