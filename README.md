@@ -6,7 +6,7 @@
 * Adds every unique entry into a database of publications. Two databases are created:
   1. A database of search terms
   2. A database of publications, with a foreign key connected to search terms
-* Returns a csv-format of results for each search term (*e.g. if you typed* Memristors, ebola virus, reduced order models, hepatocellular carcinoma, HIV *you will see five files: MEMRISTORS.csv, EBOLA VIRUS.csv, REDUCED ORDER MODELS.csv, HEPATOCELLULAR CARCINOMA.csv, HIV.csv, with 50 search entries each*)
+* Returns a csv-format of results for each search term (*e.g. if you typed* Memristors, ebola virus, reduced order models, hepatocellular carcinoma, HIV *you will see five files: MEMRISTORS.csv, EBOLA VIRUS.csv, REDUCED ORDER MODELS.csv, HEPATOCELLULAR CARCINOMA.csv, HIV.csv, with 50 results each*)
 
 ### Program Requirements:
 * **You must use a Mac computer** (*Backend was changed to tkAgg. Should work in Windows too but not tested*)
