@@ -4,7 +4,7 @@
 **What it does:**
 * Accepts multiple Google Scholar search terms separated by a comma (up to 5 is suitable for the graphic). Returns a graphic of boxplots to describe the distribution of number of citations of top search results for Google Scholar in that field. Also returns 
 
-## Program Requirements:
+### Program Requirements:
 * **You must use a Mac computer** (*Backend was changed to tkAgg. Should work in Windows too but not tested*)
 * Please use Chrome Browser, because cache-clearing function doesn't work in Safari
 * You must use from MWireless or public wifi to avoid overloading requests. Should your requests be overloaded on a public IP address, limit your search terms until requests are met. Once those search terms are cached, you can try comparing the multiple terms again.
@@ -12,7 +12,7 @@
 * Program requires python 3.6 installed with packages located in *requirements.txt*
 * Make sure to update *config.py* with the appropriate database name and database user
 
-### How to run:
+## How to run:
 1. Download packages in *requirements.txt*
 2. Update *config.py* with database name and database user
 3. Type: *python SI507_F17_finalproject.py runserver* into the command prompt to start local server
