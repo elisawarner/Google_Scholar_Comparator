@@ -10,7 +10,7 @@
 * You must use from MWireless or public wifi to avoid overloading requests. Should your requests be overloaded on a public IP address, limit your search terms until requests are met. Once those search terms are cached, you can try comparing the multiple terms again.
 * If you were met with an error, reduce your search terms. You were likely overloaded requests (see previous bullet)
 * Program requires python 3.6 installed with packages located in *requirements.txt*
-* Make sure to update *config.py* with an appropriate database name
+* Make sure to update *config.py* with the appropriate database name and database user
 
 ### How to run:
 1. Download packages in *requirements.txt*
