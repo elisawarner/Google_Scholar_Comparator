@@ -33,3 +33,10 @@
 
 ![Image of Google Scholar Comparator](https://github.com/elisawarner/Final_Project/blob/master/Google_Comparator-2.png)
 *List of top Google Scholar Search Results Table*
+
+### Acknowledgments and Citations:
+* Complex caching system with expiration date courtesy of: Anand Doshi, nytimes.py
+* Unique Cache Key Function (params_unique_combination) courtesy of: Jackie Cohen, Runestone text
+* matplotlib example courtesy of: http://blog.bharatbhole.com/creating-boxplots-with-matplotlib/
+* setup_database() function courtesy of Jackie Cohen, Project-6
+* insert() function for database courtesy of Anand Doshi, section-week-11
