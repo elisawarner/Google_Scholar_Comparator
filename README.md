@@ -15,7 +15,7 @@
 ## How to run:
 1. Download packages in *requirements.txt*
 2. Update *config.py* with database name and database user
-3. Type: *python SI507_F17_finalproject.py runserver* into the command prompt to start local server
+3. Type: *python SI507F17_finalproject.py runserver* into the command prompt to start local server
 3. Type: *localhost:5000* in your Chrome browser
 4. Type multiple Google Search terms into the search bar separated by a comma
 
