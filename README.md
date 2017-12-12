@@ -5,7 +5,7 @@
 * Accepts multiple Google Scholar search terms separated by a comma (up to 5 is suitable for the graphic). Returns a graphic of boxplots to describe the distribution of number of citations of top search results for Google Scholar in that field. Also returns 
 
 ## Program Requirements:
-* **You must use a Mac computer** (Backend was changed to tkAgg, not guaranteed, should work in Windows too but not tested)
+* **You must use a Mac computer** (*Backend was changed to tkAgg. Should work in Windows too but not tested*)
 * Please use Chrome Browser, because cache-clearing function doesn't work in Safari
 * You must use from MWireless or public wifi to avoid overloading requests. Should your requests be overloaded on a public IP address, limit your search terms until requests are met. Once those search terms are cached, you can try comparing the multiple terms again.
 * If you were met with an error, reduce your search terms. You were likely caught by Google for breaching terms of service (see previous bullet)
