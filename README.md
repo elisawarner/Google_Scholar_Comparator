@@ -2,7 +2,11 @@
 *Regenerated from my previous git folder called "Final_Project"*
 
 **What it does:**
-* Accepts multiple Google Scholar search terms separated by a comma (up to 5 is suitable for the graphic). Returns a graphic of boxplots to describe the distribution of number of citations of top search results for Google Scholar in that field. Also returns 
+* Accepts multiple Google Scholar search terms separated by a comma (up to 5 is suitable for the graphic). Returns a graphic of boxplots to describe the distribution of number of citations for top 50 search results for Google Scholar in that field. Also returns a table for each topic of the top 5 Google Scholar publications for each topic, including the title, authors, year, journal, and number of citations
+* Adds every unique entry into a database of publications. Two databases are created:
+  1. A database of search terms
+  2. A database of publications, with a foreign key connected to search terms
+* Returns a csv-format of results for each search term (*e.g. if you typed* Memristors, ebola virus, reduced order models, hepatocellular carcinoma, HIV *you will see five files: MEMRISTORS.csv, EBOLA VIRUS.csv, REDUCED ORDER MODELS.csv, HEPATOCELLULAR CARCINOMA.csv, HIV.csv, with 50 search entries each*)
 
 ### Program Requirements:
 * **You must use a Mac computer** (*Backend was changed to tkAgg. Should work in Windows too but not tested*)
