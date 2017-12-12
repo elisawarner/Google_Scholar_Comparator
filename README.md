@@ -22,8 +22,10 @@
 # Screenshots of software
 
 ![Image of Google Scholar Comparator](https://github.com/elisawarner/Final_Project/blob/master/Google_Comparator_1.png)
-Google Scholar Comparator Landing Page. Type search terms here separated by a coma
+*Google Scholar Comparator Landing Page. Type search terms here separated by a comma*
+
 ![Image of Google Scholar Comparator](https://github.com/elisawarner/Final_Project/blob/master/Google_Comparator_3.png)
-Google Scholar Comparator's Citation Results Visual
+*Google Scholar Comparator's Citation Results Visual*
+
 ![Image of Google Scholar Comparator](https://github.com/elisawarner/Final_Project/blob/master/Google_Comparator-2.png)
-List of top Google Scholar Search Results Table
+*List of top Google Scholar Search Results Table*
