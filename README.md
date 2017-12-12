@@ -2,7 +2,7 @@
 *Regenerated from my previous git folder called "Final_Project"*
 
 **What it does:**
-* Accepts multiple Google Scholar search terms separated by a comma (up to 5 is suitable for the graphic). Returns a graphic of boxplots to describe the distribution of number of citations for top 50 search results for Google Scholar in that field. Also returns a table for each topic of the top 5 Google Scholar publications for each topic, including the title, authors, year, journal, and number of citations
+* Accepts multiple Google Scholar search terms separated by a comma (up to 5 is suitable for the graphic). Returns a graphic of boxplots to describe the distribution of number of citations for top 50 search results for Google Scholar in that field. Also returns a table for each topic of the top 5 Google Scholar publications for each topic, including the title, authors, year, journal, link to the paper, and number of citations
 * Adds every unique entry into a database of publications. Two databases are created:
   1. A database of search terms
   2. A database of publications, with a foreign key connected to search terms
