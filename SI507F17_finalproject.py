@@ -45,7 +45,7 @@ except:
     CACHE_DICTION = {}
 
 
-# CITE: 
+# CITE: Anand Doshi, nytimes.py
 def has_cache_expired(timestamp_str, expire_in_days): # BUG 1
     """Check if cache timestamp is over expire_in_days old"""
     # gives current datetime
@@ -65,7 +65,7 @@ def has_cache_expired(timestamp_str, expire_in_days): # BUG 1
     else:
         return True
 
-# CITE: 
+# CITE: Jackie Cohen, Runestone Virtual Textbook
 def params_unique_combination(baseurl, params_d, private_keys=["api_key"]):
     alphabetized_keys = sorted(params_d.keys())
     res = []
@@ -74,7 +74,7 @@ def params_unique_combination(baseurl, params_d, private_keys=["api_key"]):
             res.append("{}-{}".format(k, params_d[k]))
     return baseurl + "_".join(res)
 
-# CITE: 
+# CITE: Anand Doshi, nytimes.py
 def get_from_cache(url, params_d):
     """If URL exists in cache and has not expired, return the html, else return None"""
     cache_key = params_unique_combination(url, params_d)
@@ -92,7 +92,7 @@ def get_from_cache(url, params_d):
 
     return html
 
-# CITE: 
+# CITE: Anand Doshi, nytimes.py
 def set_in_cache(url, params_d, html, expire_in_days):
     """Add URL and html to the cache dictionary, and save the whole dictionary to a file as json"""
     cache_key = params_unique_combination(url, params_d)
@@ -107,7 +107,7 @@ def set_in_cache(url, params_d, html, expire_in_days):
         cache_json = json.dumps(CACHE_DICTION)
         cache_file.write(cache_json)
 
-# CITE:
+# CITE: Anand Doshi, nytimes.py
 def get_html_from_url(url, params_d, expire_in_days=7): #Added params_d
     """Check in cache, if not found, load html, save in cache and then return that html"""
     # check in cache
@@ -152,6 +152,7 @@ def search_google_scholar(search_term, params_d = {}):
 ########################### DATABASE FILES #######################################
 ############ CITE: SI507_project6.py, Jackie Cohen, Anand Doshi ##################
 
+# CITE: Jackie Cohen, project-6
 def get_connection_and_cursor():
     try:
         if db_password != "":
@@ -171,6 +172,7 @@ conn, cur = get_connection_and_cursor()
 
 
 # Write code / functions to create tables with the columns you want and all database setup here.
+# CITE: inspired by project6
 def setup_database():
     # Invovles DDL commands
     # DDL --> Data Definition Language
@@ -206,6 +208,7 @@ def setup_database():
     print('Setup database complete')
 
 # inserts a column into the table
+# CITE: Anand Doshi, section-week-11
 def insert(conn, cur, table, data_dict):
     column_names = data_dict.keys()
     # print(column_names)
@@ -289,7 +292,7 @@ def wrapper_call(search_term, ID_num):
     cite_list = []
     journal_list = []
     params_d = {}
-    maxPage = 60
+    maxPage = 50
 
     # setting up Database stuff
     conn, cur = get_connection_and_cursor()
@@ -303,7 +306,7 @@ def wrapper_call(search_term, ID_num):
     ### This part gets the information from google, then mines it for info
 
 #    try:
-    for num in [0,maxPage,10]:
+    for num in range(0,maxPage,10):
         params_d['start'] = num
         print("Page %s" % (num))
         search_google_scholar(search_term, params_d)
@@ -336,7 +339,7 @@ def wrapper_call(search_term, ID_num):
 
 
 def plotdata(input_dict):
-	# CITE: Code inspired by http://blog.bharatbhole.com/creating-boxplots-with-matplotlib/
+	# CITE: Code taken from http://blog.bharatbhole.com/creating-boxplots-with-matplotlib/
 	key_names = list(input_dict.keys())
 	plot_list = []
 
