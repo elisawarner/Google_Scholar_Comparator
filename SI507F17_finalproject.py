@@ -114,9 +114,8 @@ def get_html_from_url(url, params_d, expire_in_days=7): #Added params_d
     html = get_from_cache(url, params_d)
  #   print(html)
     if html != None:
- #       if DEBUG:
-        print('Loading from cache: {0}'.format(url))
-        print()
+        if DEBUG:
+            print('Loading from cache: {0}'.format(url))
     else:
  #       if DEBUG:
         print('Fetching a fresh copy: {0}'.format(url))
@@ -231,10 +230,10 @@ class Paper(object):
 
         self.title = data.find('h3',{'class':'gs_rt'}).text.replace('[HTML]','').replace('[DOC]','').replace('[RTF]','').replace('[PDF]','').replace('[CITATION][C]','').replace('[BOOK][B]','').strip(' .').encode('utf-8').decode('ascii','ignore')
         try:
-        	self.link = data.find('h3',{'class':'gs_rt'}).find('a')['href']
+            self.link = data.find('h3',{'class':'gs_rt'}).find('a')['href']
         except:
-        	self.link = None
-		
+            self.link = None
+
         results_list = data.find_all('div',{'class':'gs_fl'})
         self.no_citations = 0
         for x in results_list:
@@ -244,10 +243,9 @@ class Paper(object):
                 pass
 
         author_line_pre = data.find('div',{'class':'gs_a'}).text
-        
         if author_line_pre.startswith('US Patent'):
             author_line = re.split('\d\,\s', author_line_pre)
-            print(author_line)
+            # print(author_line)
             self.authors = [author_line[0]]
             self.year = author_line[1].split('-')[0].strip()
             self.journal = author_line[1].split('-')[1].strip()
@@ -270,7 +268,7 @@ class Paper(object):
         return [self.title, self.authors, self.year, self.journal, self.no_citations]
 
     def __str__(self):
-        return "{0} by {1}".format(self.title, ' '.join(self.authors))
+        return "{0} by {1}".format(self.title, ', '.join(self.authors))
 
     def __repr__(self):
         return self.no_citations
@@ -314,7 +312,8 @@ def wrapper_call(search_term, ID_num):
 #    try:
     for num in range(0,maxPage,10):
         params_d['start'] = num
-        print("Page %s" % (num))
+        if DEBUG:
+            print("Page %s" % (num))
 
         for entry in search_google_scholar(search_term, params_d):
 
