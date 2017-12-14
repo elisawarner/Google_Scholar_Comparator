@@ -113,7 +113,7 @@ def get_html_from_url(url, params_d, expire_in_days=7): #Added params_d
     # check in cache
     html = get_from_cache(url, params_d)
  #   print(html)
-    if html != None:
+    if html is not None:
         if DEBUG:
             print('Loading from cache: {0}'.format(url))
     else:
@@ -154,7 +154,7 @@ def search_google_scholar(search_term, params_d = {}):
 # CITE: Jackie Cohen, project-6
 def get_connection_and_cursor():
     try:
-        if db_password != "":
+        if db_password:
             db_connection = psycopg2.connect("dbname='{0}' user='{1}' password='{2}'".format(db_name, db_user, db_password))
             print("Success connecting to database")
         else:
