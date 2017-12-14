@@ -1,0 +1,51 @@
+Title,Authors,Year,Citations,Journal,Link,Topic
+The missing memristor found,"['DB Strukov', 'GS Snider', 'DR Stewart', 'RS Williams']",2008,5255,nature,https://www.nature.com/nature/journal/v453/n7191/abs/nature06932.html,MEMRISTOR
+Memristor-the missing circuit element,['L Chua'],1971,4097,IEEE Transactions on circuit theory,http://ieeexplore.ieee.org/abstract/document/1083337/,MEMRISTOR
+Nanoscale memristor device as synapse in neuromorphic systems,"['SH Jo', 'T Chang', 'I Ebong', 'BB Bhadviya']",2010,1666,Nano,http://pubs.acs.org/doi/abs/10.1021/nl904092h,MEMRISTOR
+SPICE Model of Memristor with Nonlinear Dopant Drift,"['Z Biolek', 'D Biolek', 'V Biolkova']",2009,728,Radioengineering,http://www.academia.edu/download/45715655/09_02_210_214.pdf,MEMRISTOR
+Memristor oscillators,"['M Itoh', 'LO Chua']",2008,594,International Journal of Bifurcation and Chaos,http://www.worldscientific.com/doi/abs/10.1142/S0218127408022354,MEMRISTOR
+How we found the missing memristor,['RS Williams'],2008,547,IEEE spectrum,http://ieeexplore.ieee.org/abstract/document/4687366/,MEMRISTOR
+The elusive memristor: properties of basic electrical circuits,"['YN Joglekar', 'SJ Wolf']",2009,528,European Journal of Physics,http://iopscience.iop.org/article/10.1088/0143-0807/30/4/001/meta,MEMRISTOR
+Memristor CMOS hybrid integrated circuits for reconfigurable logic,"['Q Xia', 'W Robinett', 'MW Cumbie', 'N Banerjee']",2009,441,Nano,http://pubs.acs.org/doi/abs/10.1021/nl901874j,MEMRISTOR
+A functional hybrid memristor crossbar-array/CMOS system for data storage and neuromorphic applications,"['KH Kim', 'S Gaba', 'D Wheeler', 'JM Cruz-Albrecht']",2011,472,Nano,http://pubs.acs.org/doi/abs/10.1021/nl203687n,MEMRISTOR
+Spintronic memristor through spin-torque-induced magnetization motion,"['X Wang', 'Y Chen', 'H Xi', 'H Li']",2009,246,IEEE electron device,http://ieeexplore.ieee.org/abstract/document/4781542/,MEMRISTOR
+A ferroelectric memristor,"['A Chanthbouala', 'V Garcia', 'RO Cherifi']",2012,347,arXiv preprint arXiv,https://arxiv.org/abs/1206.3397,MEMRISTOR
+Implementing memristor based chaotic circuits,['B Muthuswamy'],2010,310,International Journal of Bifurcation and Chaos,http://www.worldscientific.com/doi/abs/10.1142/S0218127410026514,MEMRISTOR
+Sub-nanosecond switching of a tantalum oxide memristor,"['AC Torrezan', 'JP Strachan', 'G Medeiros-Ribeiro']",2011,334,,http://iopscience.iop.org/article/10.1088/0957-4484/22/48/485203/meta,MEMRISTOR
+Nonvolatile memristor memory: device characteristics and design implications,"['Y Ho', 'GM Huang', 'P Li']",2009,234,of the 2009 International Conference on,http://dl.acm.org/citation.cfm?id=1687491,MEMRISTOR
+The missing circuit element. Circuit Theory,['LOM Chua'],1971,63,IEEE Trans,,MEMRISTOR
+TEAM: Threshold adaptive memristor model,"['S Kvatinsky', 'EG Friedman', 'A Kolodny']",2013,318,IEEE Transactions on,http://ieeexplore.ieee.org/abstract/document/6353604/,MEMRISTOR
+A flexible solution-processed memristor,"['N Gergel-Hackett', 'B Hamadani']",2009,210,IEEE Electron,http://ieeexplore.ieee.org/abstract/document/5061634/,MEMRISTOR
+Macromodeling of the memristor in SPICE,"[' Rk', 'G Cserey']",2010,194,Transactions on Computer-Aided Design of,http://ieeexplore.ieee.org/abstract/document/5433753/,MEMRISTOR
+Memristor applications for programmable analog ICs,"['S Shin', 'K Kim', 'SM Kang']",2011,241,IEEE Transactions on,http://ieeexplore.ieee.org/abstract/document/5373864/,MEMRISTOR
+Short-term memory to long-term memory transition in a nanoscale memristor,"['T Chang', 'SH Jo', 'W Lu']",2011,290,ACS nano,http://pubs.acs.org/doi/abs/10.1021/nn202983n,MEMRISTOR
+Memristor-based chaotic circuits,"['B Muthuswamy', 'PP Kokate']",2009,223,IETE Technical Review,http://www.tandfonline.com/doi/abs/10.4103/0256-4602.57827,MEMRISTOR
+A memristor SPICE implementation and a new approach for magnetic flux-controlled memristor modeling,"['D Batas', 'H Fiedler']",2011,198,IEEE Transactions on Nanotechnology,http://ieeexplore.ieee.org/abstract/document/5373921/,MEMRISTOR
+Anatomy of a Nanoscale Conduction Channel Reveals the Mechanism of a HighPerformance Memristor,"['F Miao', 'JP Strachan', 'JJ Yang', 'MX Zhang']",2011,248,Advanced,http://onlinelibrary.wiley.com/doi/10.1002/adma.201103379/full,MEMRISTOR
+Neural synaptic weighting with a pulse-based memristor circuit,"['H Kim', 'MP Sah', 'C Yang', 'T Roska']",2012,211,IEEE Transactions on,http://ieeexplore.ieee.org/abstract/document/5976989/,MEMRISTOR
+Memristor cellular automata and memristor discrete-time cellular neural networks,"['M Itoh', 'L Chua']",2014,208,Memristor Networks,http://link.springer.com/chapter/10.1007/978-3-319-02630-5_30,MEMRISTOR
+Transient chaos in smooth memristor oscillator,"['B Bo-Cheng', 'L Zhong', 'X Jian-Ping']",2010,133,Chinese Physics B,http://iopscience.iop.org/article/10.1088/1674-1056/19/3/030510/meta,MEMRISTOR
+Steady periodic memristor oscillator with transient chaotic behaviours,"['BC Bao', 'Z Liu', 'JP Xu']",2010,111,Electronics letters,http://ieeexplore.ieee.org/abstract/document/5410670/,MEMRISTOR
+A versatile memristor model with nonlinear dopant kinetics,"['T Prodromakis', 'BP Peh']",2011,194,IEEE transactions on,http://ieeexplore.ieee.org/abstract/document/5934403/,MEMRISTOR
+Memristor MOS content addressable memory (MCAM): Hybrid architecture for future high performance search engines,"['K Eshraghian', 'KR Cho', 'O Kavehei']",2011,197,Transactions on Very,http://ieeexplore.ieee.org/abstract/document/5471063/,MEMRISTOR
+Synchronization control of a class of memristor-based recurrent neural networks,"['A Wu', 'S Wen', 'Z Zeng']",2012,204,Information Sciences,http://www.sciencedirect.com/science/article/pii/S0020025511003835,MEMRISTOR
+Nanobatteries in redox-based resistive switches require extension of memristor theory,"['I Valov', 'E Linn', 'S Tappertzhofen', 'S Schmelzer']",2013,212,Nature,https://www.nature.com/ncomms/journal/v4/n4/full/ncomms2784.html,MEMRISTOR
+Nonlinear dynamics of memristor oscillators,"['F Corinto', 'A Ascoli', 'M Gilli']",2011,198,on Circuits and Systems I: Regular,http://ieeexplore.ieee.org/abstract/document/5704223/,MEMRISTOR
+A memristor device model,"['C Yakopcic', 'TM Taha', 'G Subramanyam']",2011,135,IEEE electron device,http://ieeexplore.ieee.org/abstract/document/6012511/,MEMRISTOR
+Dynamical properties and design analysis for nonvolatile memristor memories,"['Y Ho', 'GM Huang', 'P Li']",2011,193,Transactions on Circuits and Systems I,http://ieeexplore.ieee.org/abstract/document/5604689/,MEMRISTOR
+Design implications of memristor-based RRAM cross-point structures,"['C Xu', 'X Dong', 'NP Jouppi', 'Y Xie']",2011,169,Design,http://ieeexplore.ieee.org/abstract/document/5763125/,MEMRISTOR
+Memristor emulator for memristor circuit applications,"['H Kim', 'MP Sah', 'C Yang', 'S Cho']",2012,165,IEEE Transactions on,http://ieeexplore.ieee.org/abstract/document/6183495/,MEMRISTOR
+Advances in neuromorphic memristor science and applications,"['R Kozma', 'RE Pino', 'GE Pazienza']",2012,75,,https://books.google.com/books?hl=en&lr=&id=ATdIfAol_k4C&oi=fnd&pg=PR5&dq=MEMRISTOR&ots=Gxy8ta_sY7&sig=j6BdvTCdHE1Dpb1LwknMhyzm2i8,MEMRISTOR
+Memristor bridge synapses,"['H Kim', 'MP Sah', 'C Yang', 'T Roska']",2012,154,Proceedings of the,http://ieeexplore.ieee.org/abstract/document/6074916/,MEMRISTOR
+Synaptic learning and memory functions achieved using oxygen ion migration/diffusion in an amorphous InGaZnO memristor,"['ZQ Wang', 'HY Xu', 'XH Li', 'H Yu', 'YC Liu']",2012,179,Advanced Functional,http://onlinelibrary.wiley.com/doi/10.1002/adfm.201103148/full,MEMRISTOR
+Initial state dependent dynamical behaviors in a memristor based chaotic circuit,"['B Bo-Cheng', 'X Jian-Ping', 'L Zhong']",2010,91,Chinese Physics Letters,http://iopscience.iop.org/article/10.1088/0256-307X/27/7/070504/meta,MEMRISTOR
+Integration of nanoscale memristor synapses in neuromorphic computing architectures,"['G Indiveri', 'B Linares-Barranco', 'R Legenstein']",2013,195,,http://iopscience.iop.org/article/10.1088/0957-4484/24/38/384010/meta,MEMRISTOR
+Three fingerprints of memristor,"['SP Adhikari', 'MP Sah', 'H Kim']",2013,168,IEEE Transactions on,http://ieeexplore.ieee.org/abstract/document/6549211/,MEMRISTOR
+"The fourth element: characteristics, modelling and electromagnetic theory of the memristor","['O Kavehei', 'A Iqbal', 'YS Kim']",2010,166,of the Royal,http://rspa.royalsocietypublishing.org/content/early/2010/03/12/rspa.2009.0553.short,MEMRISTOR
+"A Memristor-Based Hyperchaotic System with Hidden Attractors: Dynamics, Synchronization and Circuital Emulating","['VT Pham', 'CK Volos', 'S Vaidyanathan', 'TP Le']",2015,130,Journal of Engineering,http://www.jestr.org/downloads/Volume8Issue2/fulltext82262015.pdf,MEMRISTOR
+Global Mittag-Leffler stability and synchronization of memristor-based fractional-order neural networks,"['J Chen', 'Z Zeng', 'P Jiang']",2014,171,Neural Networks,http://www.sciencedirect.com/science/article/pii/S089360801300292X,MEMRISTOR
+Fractional-order memristor-based Chua's circuit,['I Petras'],2010,127,IEEE Transactions on Circuits and Systems II: Express,http://ieeexplore.ieee.org/abstract/document/5624576/,MEMRISTOR
+Forming-free colossal resistive switching effect in rare-earth-oxide  films for memristor applications,"['X Cao', 'X Li', 'X Gao', 'W Yu', 'X Liu', 'Y Zhang']",2009,106,Journal of Applied,http://aip.scitation.org/doi/abs/10.1063/1.3236573,MEMRISTOR
+Memristor-based memory: The sneak paths problem and solutions,"['MA Zidan', 'HAH Fahmy', 'MM Hussain']",2013,143,Microelectronics Journal,http://www.sciencedirect.com/science/article/pii/S0026269212002108,MEMRISTOR
+Memristor bridge synapse-based neural network and its learning,"['SP Adhikari', 'C Yang', 'H Kim']",2012,138,IEEE Transactions on,http://ieeexplore.ieee.org/abstract/document/6232461/,MEMRISTOR
+Comprehensive physical model of dynamic resistive switching in an oxide memristor,"['S Kim', 'SH Choi', 'W Lu']",2014,141,ACS nano,http://pubs.acs.org/doi/abs/10.1021/nn405827t,MEMRISTOR

@@ -226,51 +226,57 @@ def insert(conn, cur, table, data_dict):
 ########################## CLASS AND CSV FILES ###################################
 
 class Paper(object):
-	def __init__(self, data, search_term):
-		self.search_term = search_term
+    def __init__(self, data, search_term):
+        self.search_term = search_term
 
-		self.title = data.find('h3',{'class':'gs_rt'}).text.replace('[HTML]','').replace('[DOC]','').replace('[RTF]','').replace('[PDF]','').replace('[CITATION][C]','').replace('[BOOK][B]','').strip(' .').encode('utf-8').decode('ascii','ignore')
-		try:
-			self.link = data.find('h3',{'class':'gs_rt'}).find('a')['href']
-		except:
-			self.link = None
+        self.title = data.find('h3',{'class':'gs_rt'}).text.replace('[HTML]','').replace('[DOC]','').replace('[RTF]','').replace('[PDF]','').replace('[CITATION][C]','').replace('[BOOK][B]','').strip(' .').encode('utf-8').decode('ascii','ignore')
+        try:
+        	self.link = data.find('h3',{'class':'gs_rt'}).find('a')['href']
+        except:
+        	self.link = None
 		
-		results_list = data.find_all('div',{'class':'gs_fl'})
-		self.no_citations = 0
-		for x in results_list:
-			try:
-				self.no_citations = int(re.search('(?<=Cited by )....', x.text).group(0).strip(' R'))
-			except:
-				pass
+        results_list = data.find_all('div',{'class':'gs_fl'})
+        self.no_citations = 0
+        for x in results_list:
+            try:
+                self.no_citations = int(re.search('(?<=Cited by )....', x.text).group(0).strip(' R'))
+            except:
+                pass
 
-		author_line_pre = data.find('div',{'class':'gs_a'}).text
-		author_line = re.split('\s\-\s', author_line_pre)
-		self.authors = [x.strip(' ').encode('utf-8').decode('ascii','ignore') for x in author_line[0].split(',')]
-		self.year = author_line[1].split(',')[-1].strip()
+        author_line_pre = data.find('div',{'class':'gs_a'}).text
+        
+        if author_line_pre.startswith('US Patent'):
+            author_line = re.split('\d\,\s', author_line_pre)
+            print(author_line)
+            self.authors = [author_line[0]]
+            self.year = author_line[1].split('-')[0].strip()
+            self.journal = author_line[1].split('-')[1].strip()
+        else:
+            author_line = re.split('\s\-\s', author_line_pre)
+            self.authors = [x.strip(' ').encode('utf-8').decode('ascii','ignore') for x in author_line[0].split(',')]
+            self.year = author_line[1].split(',')[-1].strip()
 
-		try:
-			self.journal = author_line[1].split(',')[0].strip().encode('utf-8').decode('ascii','ignore')
-		except:
-			self.journal = None
-		if self.journal.isdigit():
-			self.journal = None
+            try:
+                self.journal = author_line[1].split(',')[0].strip().encode('utf-8').decode('ascii','ignore')
+            except:
+                self.journal = None
+            if self.journal.isdigit():
+                self.journal = None
 
-	def package(self):
-		return [self.title, self.authors, self.year, self.no_citations, self.journal, self.link, self.search_term]
+    def package(self):
+        return [self.title, self.authors, self.year, self.no_citations, self.journal, self.link, self.search_term]
 
-	def package_html(self):
-		return [self.title, self.authors, self.year, self.journal, self.no_citations]
+    def package_html(self):
+        return [self.title, self.authors, self.year, self.journal, self.no_citations]
 
-	def __str__(self):
-		return "{0} by {1}".format(self.title, ' '.join(self.authors))
+    def __str__(self):
+        return "{0} by {1}".format(self.title, ' '.join(self.authors))
 
-	# FILL THIS OUT
-	def __repr__(self):
-		return self.no_citations
+    def __repr__(self):
+        return self.no_citations
 
-	# FILL THIS OUT
-	def __contains__(self, value):
-		return value in self.title
+    def __contains__(self, value):
+        return value in self.title
 
 def write_to_csv(name, input_list):
 	fhnd = open('./csv_files/' + name + '.csv','w')
@@ -300,7 +306,7 @@ def wrapper_call(search_term, ID_num):
     # add values
     cur.execute("""INSERT INTO "Subjects"("ID", "Name") VALUES(%s, %s) on conflict do nothing""", (ID_num, search_term))
 
-    if DEBUG == True:
+    if DEBUG:
         print("%s added to Subject database" % (search_term))
 
     ### This part gets the information from google, then mines it for info
@@ -309,7 +315,6 @@ def wrapper_call(search_term, ID_num):
     for num in range(0,maxPage,10):
         params_d['start'] = num
         print("Page %s" % (num))
-        search_google_scholar(search_term, params_d)
 
         for entry in search_google_scholar(search_term, params_d):
 
@@ -323,12 +328,11 @@ def wrapper_call(search_term, ID_num):
 
             insert(conn, cur, "Publications", {"ID": id_test+1, "Title": a.title, "Authors": a.authors, "Year": a.year, "Citations": a.no_citations, "Journal": a.journal, "Link": a.link, "Topic_ID": ID_num})
 
-            if DEBUG == True:
+            if DEBUG:
             	print("Added %s to database" % (a.title))
 
             cite_list.append(a.no_citations)
 
-    # take average number of citations
 #    except:
 #        print("Please try another search term. We couldn't find enough Google Results")
     conn.commit()
@@ -356,11 +360,6 @@ def plotdata(input_dict):
 	# Create the boxplot
 	bp = ax.boxplot(plot_list, patch_artist=True)
 	ax.set_xticklabels(key_names)
-
-
-	# prettify everything
-	## add patch_artist=True option to ax.boxplot() 
-	## to get fill color
 
 	## change outline color, fill color and linewidth of the boxes
 	for box in bp['boxes']:

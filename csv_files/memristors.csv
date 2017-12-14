@@ -4,14 +4,14 @@ Resistance switching memories are memristors,['L Chua'],2014,768,Memristor Netwo
 Practical approach to programmable analog circuits with memristors,"['YV Pershin', 'M Di Ventra']",2010,418,on Circuits and Systems I: Regular,http://ieeexplore.ieee.org/abstract/document/5405039/,MEMRISTORS
 Exponential ionic drift: fast switching and low volatility of thin-film memristors,"['DB Strukov', 'RS Williams']",2009,377,Applied Physics A: Materials Science &,http://www.springerlink.com/index/G671774418V0U312.pdf,MEMRISTORS
 On SPICE macromodelling of TiO2 memristors,"['S Benderli', 'TA Wey']",2009,188,Electronics letters,http://ieeexplore.ieee.org/abstract/document/4807029/,MEMRISTORS
-Training and operation of an integrated neuromorphic network based on metal-oxide memristors,"['M Prezioso', 'F Merrikh-Bayat', 'BD Hoskins', 'GC Adam']",2015,400,Nature,https://www.nature.com/nature/journal/v521/n7550/abs/nature14441.html,MEMRISTORS
+Training and operation of an integrated neuromorphic network based on metal-oxide memristors,"['M Prezioso', 'F Merrikh-Bayat', 'BD Hoskins', 'GC Adam']",2015,401,Nature,https://www.nature.com/nature/journal/v521/n7550/abs/nature14441.html,MEMRISTORS
 A scalable neuristor built with Mott memristors,"['MD Pickett', 'G Medeiros-Ribeiro', 'RS Williams']",2013,244,Nature materials,https://www.nature.com/nmat/journal/v12/n2/abs/nmat3510.html,MEMRISTORS
 Two centuries of memristors,['T Prodromakis'],2013,159,Chaos,http://www.worldscientific.com/doi/abs/10.1142/9789814434805_0041,MEMRISTORS
 Compact models for memristors based on charge-flux constitutive relationships,"['S Shin', 'K Kim', 'SM Kang']",2010,179,IEEE Transactions on Computer,http://ieeexplore.ieee.org/abstract/document/5433745/,MEMRISTORS
 CNN using memristors for neighborhood connections,"['E Lehtonen', 'M Laiho']",2010,131,Cellular Nanoscale Networks and Their,http://ieeexplore.ieee.org/abstract/document/5430304/,MEMRISTORS
 Stateful implication logic with memristors,"['E Lehtonen', 'M Laiho']",2009,117,Proceedings of the 2009 IEEE/ACM International,http://dl.acm.org/citation.cfm?id=1936814,MEMRISTORS
 Writing to and reading from a nano-scale crossbar memory based on memristors,"['PO Vontobel', 'W Robinett', 'PJ Kuekes']",2009,194,,http://iopscience.iop.org/article/10.1088/0957-4484/20/42/425204/meta,MEMRISTORS
-Engineering nonlinearity into memristors for passive crossbar applications,"['J Joshua Yang', 'MX Zhang', 'MD Pickett']",2012,165,Applied Physics,http://aip.scitation.org/doi/abs/10.1063/1.3693392,MEMRISTORS
+Engineering nonlinearity into memristors for passive crossbar applications,"['J Joshua Yang', 'MX Zhang', 'MD Pickett']",2012,166,Applied Physics,http://aip.scitation.org/doi/abs/10.1063/1.3693392,MEMRISTORS
 SPICE modeling of memristors,"['H Abdalla', 'MD Pickett']",2011,146,Circuits and Systems (ISCAS),http://ieeexplore.ieee.org/abstract/document/5937942/,MEMRISTORS
 Two memristors suffice to compute all Boolean functions,"['E Lehtonen', 'JH Poikonen', 'M Laiho']",2010,70,Electronics letters,http://ieeexplore.ieee.org/abstract/document/5410671/,MEMRISTORS
 Solving mazes with memristors: A massively parallel approach,"['YV Pershin', 'M Di Ventra']",2011,116,Physical Review E,https://journals.aps.org/pre/abstract/10.1103/PhysRevE.84.046703,MEMRISTORS
@@ -23,12 +23,12 @@ Memristors and memristive systems,['R Tetzlaff'],2013,68,,http://link.springer.c
 "Pinched hysteretic loops of ideal memristors, memcapacitors and meminductors must be 'self-crossing'","['D Biolek', 'Z Biolek', 'V Biolkova']",2011,78,Electronics letters,http://digital-library.theiet.org/content/journals/10.1049/el.2011.2913,MEMRISTORS
 Measuring the switching dynamics and energy efficiency of tantalum oxide memristors,"['JP Strachan', 'AC Torrezan', 'G Medeiros-Ribeiro']",2011,85,,http://iopscience.iop.org/article/10.1088/0957-4484/22/50/505402/meta,MEMRISTORS
 Continuous Electrical Tuning of the Chemical Composition of TaOx-Based Memristors,"['F Miao', 'W Yi', 'I Goldfarb', 'JJ Yang', 'MX Zhang']",2012,91,ACS,http://pubs.acs.org/doi/abs/10.1021/nn2044577,MEMRISTORS
-On the mathematical modeling of memristors,"['AG Radwan', 'MA Zidan']",2010,68,(ICM),http://ieeexplore.ieee.org/abstract/document/5696139/,MEMRISTORS
+On the mathematical modeling of memristors,"['AG Radwan', 'MA Zidan']",2010,69,(ICM),http://ieeexplore.ieee.org/abstract/document/5696139/,MEMRISTORS
 Two-terminal resistive switches (memristors) for memory and logic applications,"['W Lu', 'KH Kim', 'T Chang', 'S Gaba']",2011,80,Proceedings of the 16th Asia and,http://dl.acm.org/citation.cfm?id=1950868,MEMRISTORS
 Spectromicroscopy of tantalum oxide memristors,"['JP Strachan', 'G Medeiros-Ribeiro', 'JJ Yang']",2011,73,Applied Physics,http://aip.scitation.org/doi/abs/10.1063/1.3599589,MEMRISTORS
-Thermophoresis/diffusion as a plausible mechanism for unipolar resistive switching in metaloxidemetal memristors,"['DB Strukov', 'F Alibart', 'RS Williams']",2012,81,Applied Physics A,http://link.springer.com/article/10.1007/s00339-012-6902-x,MEMRISTORS
+Thermophoresis/diffusion as a plausible mechanism for unipolar resistive switching in metaloxidemetal memristors,"['DB Strukov', 'F Alibart', 'RS Williams']",2012,82,Applied Physics A,http://link.springer.com/article/10.1007/s00339-012-6902-x,MEMRISTORS
 Geometry variations analysis of TiO 2 thin-film and spintronic memristors,"['M Hu', 'H Li', 'Y Chen', 'X Wang', 'RE Pino']",2011,64,Proceedings of the 16th Asia and,http://dl.acm.org/citation.cfm?id=1950820,MEMRISTORS
-"Memristors: devices, models, and applications","['P Mazumder', 'SM Kang']",2012,74,Proceedings of the,https://pdfs.semanticscholar.org/3bb4/15c80ebfa0f4a0c4fa4d5606a28f5cf50b5a.pdf,MEMRISTORS
+"Memristors: devices, models, and applications","['P Mazumder', 'SM Kang']",2012,75,Proceedings of the,https://pdfs.semanticscholar.org/3bb4/15c80ebfa0f4a0c4fa4d5606a28f5cf50b5a.pdf,MEMRISTORS
 Neural learning circuits utilizing nano-crystalline silicon transistors and memristors,"['KD Cantley', 'A Subramaniam']",2012,75,IEEE transactions on,http://ieeexplore.ieee.org/abstract/document/6144768/,MEMRISTORS
 State dynamics and modeling of tantalum oxide memristors,"['JP Strachan', 'AC Torrezan', 'F Miao']",2013,72,on Electron Devices,http://ieeexplore.ieee.org/abstract/document/6542012/,MEMRISTORS
 "Reliable SPICE simulations of memristors, memcapacitors and meminductors","['D Biolek', 'M Di Ventra', 'YV Pershin']",2013,80,arXiv preprint arXiv:1307.2717,https://arxiv.org/abs/1307.2717,MEMRISTORS
@@ -49,13 +49,3 @@ Lognormal switching times for titanium dioxide bipolar memristors: origin and re
 Memristors and Bernoulli dynamics,"['EM Drakakis', 'SN Yaliraki']",2010,38,Nanoscale Networks and,http://ieeexplore.ieee.org/abstract/document/5430324/,MEMRISTORS
 Memristive-biosensors: A new detection method by using nanofabricated memristors,"['S Carrara', 'D Sacchetto', 'MA Doucey']",2012,49,Sensors and Actuators B,http://www.sciencedirect.com/science/article/pii/S0925400512004583,MEMRISTORS
 A note on memristors,['G Oster'],1974,32,IEEE Transactions on Circuits and Systems,http://ieeexplore.ieee.org/abstract/document/1083778/,MEMRISTORS
-FPGA based on integration of memristors and CMOS devices,"['W Wang', 'TT Jing', 'B Butcher']",2010,41,Circuits and Systems (ISCAS),http://ieeexplore.ieee.org/abstract/document/5537010/,MEMRISTORS
-Fabrication and electrical characteristics of memristors with TiO2/TiO2+x active layers,"['T Prodromakis', 'K Michelakis']",2010,31,Circuits and systems,http://ieeexplore.ieee.org/abstract/document/5537379/,MEMRISTORS
-MoNETA: A mind made from memristors,"['M Versace', 'B Chandler']",2010,45,IEEE Spectrum,,MEMRISTORS
-Memristors can implement fuzzy logic,"['M Klimo', 'O Such']",2011,32,arXiv preprint arXiv:1110.2074,https://arxiv.org/abs/1110.2074,MEMRISTORS
-Drop-coated titanium dioxide memristors,"['E Gale', 'R Mayne', 'A Adamatzky']",2014,36,Materials Chemistry and,http://www.sciencedirect.com/science/article/pii/S0254058413006810,MEMRISTORS
-Dynamics analysis of chaotic circuit with two memristors,"['BC Bao', 'GD Shi', 'JP Xu', 'Z Liu', 'SH Pan']",2011,34,Science China Technological,http://link.springer.com/article/10.1007/s11431-011-4400-6,MEMRISTORS
-"TiO2-based memristors and ReRAM: materials, mechanisms and models (a review)",['E Gale'],2014,48,Semiconductor Science and Technology,http://iopscience.iop.org/article/10.1088/0268-1242/29/10/104004/meta,MEMRISTORS
-SPICE modeling of memristors with multilevel resistance states,"['F Xu-Dong', 'T Yu-Hua', 'W Jun-Jie']",2012,35,Chinese Physics B,http://iopscience.iop.org/article/10.1088/1674-1056/21/9/098901/meta,MEMRISTORS
-A scalable neural chip with synaptic electronics using CMOS integrated memristors,"['JM Cruz-Albrecht', 'T Derosier', 'N Srinivasa']",2013,37,Nanotechnology,http://iopscience.iop.org/article/10.1088/0957-4484/24/38/384011/meta,MEMRISTORS
-Resistive computing: Memristors-enabled signal multiplication,"['S Shin', 'K Kim', 'SM Kang']",2013,34,on Circuits and Systems I: Regular,http://ieeexplore.ieee.org/abstract/document/6495499/,MEMRISTORS
