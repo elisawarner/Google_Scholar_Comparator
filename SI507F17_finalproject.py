@@ -290,7 +290,7 @@ def write_to_csv(name, input_list):
 ##########################################################################
 
 
-def wrapper_call(search_term, ID_num):
+def wrapper_call(search_term):
     outlist = []
     html_list = []
     cite_list = []
@@ -302,6 +302,9 @@ def wrapper_call(search_term, ID_num):
     conn, cur = get_connection_and_cursor()
 
     # add values
+    cur.execute("""SELECT "ID" FROM "Subjects" """)
+    ID_num = len(cur.fetchall())
+
     cur.execute("""INSERT INTO "Subjects"("ID", "Name") VALUES(%s, %s) on conflict do nothing""", (ID_num, search_term))
 
     if DEBUG:
@@ -404,8 +407,8 @@ def interface(fields):
 
 	count = 0
 	for fieldName in fields:
-		count += 1
-		search_dict[fieldName] = wrapper_call(fieldName, count)
+#		count += 1
+		search_dict[fieldName] = wrapper_call(fieldName)
 
 	plotdata(search_dict)
 
