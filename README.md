@@ -45,7 +45,7 @@
 8. Information about the top 5 Publications for each search term is sent from Class Paper (method: package_html()) to results.html. The figure (saved in the static folder) is also integrated into the Results page.
 9. The User can refresh the page to start again.
 
-**SUMMARY**
+## SUMMARY
 **Input:** Search terms separated by a comma in landing page search bar
 **Output:**
 1. CSV files for top 50 Google Scholar results from each search term (Number of CSV files = Number of search terms). CSV files will be contained in a folder called *csv_files*
