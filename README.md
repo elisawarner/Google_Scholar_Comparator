@@ -4,8 +4,8 @@
 **What it does/What to expect:**
 * Accepts multiple Google Scholar search terms separated by a comma (up to 5 is suitable for the graphic). Returns a graphic of boxplots to describe the distribution of number of citations for top 50 search results for Google Scholar in that field. Also returns a table for each topic of the top 5 Google Scholar publications for each topic, including the title, authors, year, journal, link to the paper, and number of citations
 * Adds every unique entry into a database of publications. Two databases are created:
-  1. A database of search terms
-  2. A database of publications, with a foreign key connected to search terms
+  1. A table of search terms
+  2. A table of publications, with a foreign key connected to search terms
 * Returns a csv-format of results for each search term (*e.g. if you typed* Memristors, ebola virus, reduced order models, hepatocellular carcinoma, HIV *you will see five files: MEMRISTORS.csv, EBOLA VIRUS.csv, REDUCED ORDER MODELS.csv, HEPATOCELLULAR CARCINOMA.csv, HIV.csv, with 50 results each*)
 
 ### Program Requirements:
@@ -38,12 +38,19 @@
 1. The browser cache for the static folder is deleted. The user visits localhost:5000 and sees a landing page with a search bar. This is run by Flask, which borrows a template called interface.html
 2. Search terms are separated and stripped. The Google Scholar Search Results for each term are first searched for in the cache file, then request from Google Scholar if not in the cache. This data is ultimately cached.
 3. The data is parsed to return only Publications and information about them. A Class called **Paper** is used to parse the data, and will also return information set in formats for csv and Flask manipulation
-4. All incoming data is inserted into a database (wrapper_call()). The database is first set up with the setup_database(). The insert() function is used to insert the data into the "Publications" Database. Information sent to the "Subjects" database is directly handled through the wrapper_call() function.
+4. All incoming data is inserted into a database (wrapper_call()). The database is first set up with the setup_database(). The insert() function is used to insert the data into the "Publications" table. Information sent to the "Subjects" table is directly handled through the wrapper_call() function.
 5. Number of citations for each Publication in each Subject is saved for later
-6. A csv file of each searh term data is saved as an extra
+6. A csv file of each search term data is saved as an extra
 7. The plotdata() function takes the citation information from each search term and creates one graph with multiple boxplots based on the number of citations for each search term.
 8. Information about the top 5 Publications for each search term is sent from Class Paper (method: package_html()) to results.html. The figure (saved in the static folder) is also integrated into the Results page.
 9. The User can refresh the page to start again.
+
+**SUMMARY**
+**Input:** Search terms separated by a comma in landing page search bar
+**Output:**
+1. CSV files for top 50 Google Scholar results from each search term (Number of CSV files = Number of search terms). CSV files will be contained in a folder called *csv_files*
+2. Two Database tables: "Publications" (containing information about Publications), and "Search Terms" (containing all previously entered search terms)
+3. An html Results Page including a boxplot graph of the distribution of citations per search term, and the top 5 Google Scholar hits for each search term. The boxplot will be called *fig1.png* and be contained in a folder called *static*
 
 ### Acknowledgments and Citations:
 * Complex caching system with expiration date courtesy of: Anand Doshi, nytimes.py
