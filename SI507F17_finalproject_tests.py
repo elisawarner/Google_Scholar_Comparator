@@ -11,7 +11,7 @@ from SI507F17_finalproject import *
 
 class Part1(unittest.TestCase):
     def setUp(self):
-        wrapper_call("Parakeet", 1)
+        wrapper_call("Parakeet")
         self.cache = open('cache_file.json')
         self.csv_file = open('./csv_files/PARAKEET.csv')
         self.config_file = open('config.py')
